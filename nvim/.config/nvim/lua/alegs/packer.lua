@@ -50,6 +50,12 @@ require('packer').startup(function(use)
         }
     }
 
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+
+    use('lvimuser/lsp-inlayhints.nvim')
 
     -- Colorschemes
     use('ellisonleao/gruvbox.nvim')
