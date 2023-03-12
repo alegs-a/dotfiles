@@ -6,5 +6,6 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.foldmethod = 'indent'
 vim.opt.signcolumn = 'yes'
+vim.opt.scrolloff = 8
 
 vim.opt.hlsearch = false

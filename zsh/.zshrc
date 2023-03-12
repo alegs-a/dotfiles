@@ -20,6 +20,9 @@ alias gc="git commit"
 alias gs="git status"
 alias gp="git push"
 
+alias p3="python3"
+alias newvenv="python3 -m venv"
+
 setopt autocd
 
 # Tab completion

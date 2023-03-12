@@ -50,10 +50,14 @@ require('packer').startup(function(use)
         }
     }
 
+    use('mhartington/formatter.nvim')
+
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+
+    use('lervag/vimtex')
 
     use('lvimuser/lsp-inlayhints.nvim')
 
