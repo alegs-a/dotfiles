@@ -7,5 +7,6 @@ vim.opt.expandtab = true
 vim.opt.foldmethod = 'indent'
 vim.opt.signcolumn = 'yes'
 vim.opt.scrolloff = 8
+vim.opt.spell = true
 
 vim.opt.hlsearch = false

@@ -12,6 +12,19 @@ require('formatter').setup {
                     stdin = true,
                 }
             end
-        }
+        },
+        rust = {
+            require('formatter.filetypes.rust').rustfmt,
+
+            function()
+                return {
+                    exe = "rustfmt",
+                    args = { "--edition 2021" },
+                    stdin = true,
+                }
+            end
+        },
     }
 }
+
+vim.keymap.set("n", "<leader>f", ":Format<CR>")

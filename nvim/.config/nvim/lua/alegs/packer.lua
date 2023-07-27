@@ -28,27 +28,40 @@ require('packer').startup(function(use)
 
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
 
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
-
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
-
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
-        }
-    }
+    use('williamboman/mason.nvim')
+    use('neovim/nvim-lspconfig')
+    use('hrsh7th/cmp-nvim-lsp') -- Necessary for nvim-cmp
+    use('hrsh7th/cmp-buffer') -- Necessary for nvim-cmp
+    use('hrsh7th/cmp-path') -- Necessary for nvim-cmp
+    use('hrsh7th/cmp-cmdline') -- Necessary for nvim-cmp
+    use('saadparwaiz1/cmp_luasnip') -- Necessary for nvim-cmp
+    use({ -- Necessary for nvim-cmp
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        tag = "v<CurrentMajor>.*",
+        -- install jsregexp (optional!:).
+        run = "make install_jsregexp"
+    }) 
+    use('rafamadriz/friendly-snippets')
+    use('hrsh7th/nvim-cmp')
+    --            Leftovers from lsp-zero
+    --            I may use some of these again, but for now they're dead to me >:)
+--            -- LSP Support
+--            ,
+--            ,
+--            {'williamboman/mason-lspconfig.nvim'},
+--
+--            -- Autocompletion
+--            {''},
+--            {'hrsh7th/cmp-buffer'},
+--            {'hrsh7th/cmp-path'},
+--            {'saadparwaiz1/cmp_luasnip'},
+--            {'hrsh7th/cmp-nvim-lsp'},
+--            {'hrsh7th/cmp-nvim-lua'},
+--
+--            -- Snippets
+--            {'L3MON4D3/LuaSnip'},
+--            {'rafamadriz/friendly-snippets'},
 
     use('mhartington/formatter.nvim')
 

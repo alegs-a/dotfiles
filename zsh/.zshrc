@@ -1,5 +1,5 @@
 # Random quote, read to you by a cow
-fortune | cowsay
+fortune | cowsay -f bud-frogs
 
 # Customise shell prompt including colours
 autoload -U colors && colors
@@ -12,7 +12,8 @@ EDITOR="nvim"
 VISUAL=$EDITOR
 GIT_EDITOR=$EDITOR
 
-alias la="ls -la"
+alias ls="ls --color=auto"
+alias la="ls -lah" # -l for more info, -a for all (hidden) entries, -h for human-readable size
 alias mp="multipass"
 alias ga="git add"
 alias gaa="git add -a"
@@ -20,8 +21,11 @@ alias gc="git commit"
 alias gs="git status"
 alias gp="git push"
 
+alias v="nvim"
+
 alias p3="python3"
-alias newvenv="python3 -m venv"
+alias venvnew="python3 -m venv"
+alias venvactivate=""
 
 setopt autocd
 
@@ -33,3 +37,4 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # Funny things
 alias starwars="curl https://asciitv.fr"
+eval "$(rbenv init - zsh)"
