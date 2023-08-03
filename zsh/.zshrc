@@ -1,5 +1,5 @@
 # Random quote, read to you by a cow
-fortune | cowsay -f bud-frogs
+fortune | cowsay -f bud-frogs | lolcat
 
 # Customise shell prompt including colours
 autoload -U colors && colors
@@ -38,3 +38,4 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # Funny things
 alias starwars="curl https://asciitv.fr"
 eval "$(rbenv init - zsh)"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
