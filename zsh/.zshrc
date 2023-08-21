@@ -21,7 +21,8 @@ alias gc="git commit"
 alias gs="git status"
 alias gp="git push"
 
-alias v="nvim"
+alias v="vim"
+alias nv="nvim"
 
 alias p3="python3"
 alias venvnew="python3 -m venv"
