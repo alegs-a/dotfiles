@@ -27,6 +27,8 @@ alias p3="python3"
 alias venvnew="python3 -m venv"
 alias venvactivate=""
 
+alias bbfs="bbfs ~/Documents/Uni/blackboard"
+
 setopt autocd
 
 # Tab completion
