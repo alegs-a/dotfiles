@@ -27,7 +27,11 @@ alias p3="python3"
 alias venvnew="python3 -m venv"
 alias venvactivate=""
 
-alias bbfs="diskutil unmount ~/Documents/Uni/blackboard && bbfs ~/Documents/Uni/blackboard"
+# For uni things
+alias bbfsremount="diskutil unmount force ~/Documents/Uni/blackboard && bbfs"
+alias bbfs="bbfs ~/Documents/Uni/blackboard"
+alias shifoo="bbfs && open ~/Documents/Uni/blackboard/CSSE2002/Assessment/Shifoo.webloc"
+alias moss="ssh s4802359@moss.labs.eait.uq.edu.au"
 
 setopt autocd
 
