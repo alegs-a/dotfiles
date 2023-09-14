@@ -1,0 +1,12 @@
+syntax on
+set background=dark
+set autoindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set encoding=utf-8
+set number
+set ttimeoutlen=10
+set foldmethod=indent
+set textwidth=100
+
