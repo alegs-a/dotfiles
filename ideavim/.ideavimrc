@@ -10,3 +10,5 @@ set ttimeoutlen=10
 set foldmethod=indent
 set textwidth=100
 
+set scrolloff=8
+
