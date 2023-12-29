@@ -52,6 +52,17 @@ require("formatter").setup({
 				}
 			end,
 		},
+        c = {
+			require("formatter.filetypes.java").clangformat,
+
+			function()
+				return {
+					exe = "clang-format",
+					args = { "--style=GNU", '-style="{IndentWidth: 4}"', "--assume-filename=.c" },
+					stdin = true,
+				}
+			end,
+        }
 	},
 })
 

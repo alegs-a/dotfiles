@@ -14,7 +14,7 @@ local packer_bootstrap = ensure_packer()
 require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
-	use({ "nvim-telescope/telescope.nvim", tag = "0.1.x", requires = { { "nvim-lua/plenary.nvim" } } })
+	use({ "nvim-telescope/telescope.nvim", tag = "0.1.4", requires = { { "nvim-lua/plenary.nvim" } } })
 
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("tpope/vim-fugitive")
@@ -40,7 +40,7 @@ require("packer").startup(function(use)
 		-- install jsregexp (optional!:).
 		run = "make install_jsregexp",
 	})
-	use("rafamadriz/friendly-snippets")
+	-- use("rafamadriz/friendly-snippets")
 	use("hrsh7th/nvim-cmp")
 	--            Leftovers from lsp-zero
 	--            I may use some of these again, but for now they're dead to me >:)

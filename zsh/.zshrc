@@ -8,9 +8,9 @@ PROMPT="%B%F{green}%n%f@%F{1}%m%f %b%f%2~ %# %b%f"
 export TERM=xterm-256color
 
 # Set default editor to nVim
-EDITOR="nvim"
-VISUAL=$EDITOR
-GIT_EDITOR=$EDITOR
+export EDITOR="nvim"
+export VISUAL=$EDITOR
+export GIT_EDITOR=$EDITOR
 
 alias ls="ls --color=auto"
 alias la="ls -lah" # -l for more info, -a for all (hidden) entries, -h for human-readable size
@@ -42,6 +42,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 
 # Funny things
-alias starwars="curl https://asciitv.fr"
+alias starwars="nc towel.blinkenlights.nl 23"
 eval "$(rbenv init - zsh)"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
