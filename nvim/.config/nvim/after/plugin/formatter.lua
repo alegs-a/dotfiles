@@ -62,6 +62,17 @@ require("formatter").setup({
 					stdin = true,
 				}
 			end,
+        },
+        haskell = {
+            require("formatter.filetypes.haskell").ormolu,
+
+            function()
+                return {
+                    exe = "ormolu",
+                    args = { "--mode inplace", },
+                    stdin = true,
+                }
+            end,
         }
 	},
 })

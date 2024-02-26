@@ -5,7 +5,9 @@ require("lspconfig").texlab.setup({})
 require("lspconfig").r_language_server.setup({})
 require("lspconfig").typst_lsp.setup({})
 require("lspconfig").clangd.setup({})
-require("lspconfig").hls.setup({}) -- Haskell Language Server
+require("lspconfig").hls.setup({
+	filetypes = { "haskell", "lhaskell", "cabal" },
+}) -- Haskell Language Server
 
 -- Global mappings
 vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)

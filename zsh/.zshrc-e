@@ -45,5 +45,3 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 alias starwars="nc towel.blinkenlights.nl 23"
 eval "$(rbenv init - zsh)"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-
-[ -f "/Users/alex/.ghcup/env" ] && source "/Users/alex/.ghcup/env" # ghcup-env
