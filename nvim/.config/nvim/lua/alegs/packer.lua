@@ -35,10 +35,6 @@ require("packer").startup(function(use)
 	use("saadparwaiz1/cmp_luasnip") -- Necessary for nvim-cmp
 	use({ -- Necessary for nvim-cmp
 		"L3MON4D3/LuaSnip",
-		-- follow latest release.
-		tag = "v<CurrentMajor>.*",
-		-- install jsregexp (optional!:).
-		run = "make install_jsregexp",
 	})
 	-- use("rafamadriz/friendly-snippets")
 	use("hrsh7th/nvim-cmp")
@@ -76,6 +72,8 @@ require("packer").startup(function(use)
 
 	-- Colorschemes
 	use("ellisonleao/gruvbox.nvim")
+
+    use("MrcJkb/haskell-tools.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
