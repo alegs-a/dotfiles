@@ -13,3 +13,7 @@ args = { program = "{0}", initCommands = [ "command script import /opt/homebrew/
 
 [language-server.rust-analyzer.config.check]
 command = "clippy"
+
+[[language]]
+name = "python"
+language-servers = [ "pyright" ]
