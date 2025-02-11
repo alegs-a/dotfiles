@@ -1,5 +1,5 @@
 require("alegs")
-require("alegs.packer")
+require("alegs.lazy")
 require("alegs.remap")
 require("alegs.set")
 

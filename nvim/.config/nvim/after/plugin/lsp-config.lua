@@ -3,7 +3,7 @@ require("lspconfig").rust_analyzer.setup({})
 require("lspconfig").jdtls.setup({})
 require("lspconfig").texlab.setup({})
 require("lspconfig").r_language_server.setup({})
-require("lspconfig").typst_lsp.setup({})
+require("lspconfig").tinymist.setup({})
 require("lspconfig").clangd.setup({})
 -- require("lspconfig").hls.setup({
 -- 	filetypes = { "haskell", "lhaskell", "cabal" },
