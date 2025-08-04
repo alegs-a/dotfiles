@@ -1,4 +1,15 @@
 [[language]]
+name = "dafny"
+scope = "source.dfy"
+file-types = ["dfy"]
+language-servers = ["dafny-server"]
+comment-tokens = []
+
+[language-server.dafny-server]
+command = "dafny"
+args = ["server", "--stdin"]
+
+[[language]]
 name = "rust"
 [language.debugger]
 name = "lldb-dap"
@@ -17,3 +28,50 @@ command = "clippy"
 [[language]]
 name = "python"
 language-servers = [ "pyright" ]
+auto-format = true
+formatter = {command = "black", args = ["-",  "--quiet","--line-length=100",]}
+
+# [[language]]
+# name = "latex"
+# 
+# [language.config.texlab]
+# auxDirectory = "build"
+# 
+# [language.config.texlab.chktex]
+# onOpenAndSave = true
+# onEdit = true
+# 
+# [language.config.texlab.forwardSearch]
+# executable = "zathura"
+# args = [ "--synctex-forward", "%l:%c:%f", "%p" ]
+# 
+# # executable = "okular"
+# # args = ["--unique", "file:%p#src:%l%f"]
+# 
+# [language.config.texlab.build]
+# forwardSearchAfter = true
+# onSave = true
+# 
+# # executable = "latexmk"
+# # args = [
+# #  "-pdf",
+# #  "-interaction=nonstopmode",
+# #  "-synctex=1",
+# #  "-shell-escape",
+# #  "-output-directory=build",
+# #  "%f"
+# #  ]
+# 
+# executable = "tectonic"
+# args = [
+#  "-X",
+#  "compile",
+#  "%f",
+#  "--synctex",
+#  "--keep-logs",
+#  "--keep-intermediates",
+#  "--outdir=build",
+#  "-Zshell-escape",
+#  ]
+# 
+# 
